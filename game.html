@@ -1,6 +1,66 @@
-<script src="game.js"></script>
+<script>
+    var world = document.getElementById('world');
 
-<link rel="stylesheet" href="game.css">
+var end = document.getElementById('end');	
+
+var nextB = world.cloneNode(true);
+	
+document.addEventListener('keydown', event => {
+  const keyName = event.key;
+    if(keyName === 'ArrowDown') {
+ 		world.cloneNode(true);
+      block4.innerHTML = nextB.innerHTML;
+      world.style.backgroundColor ="white";
+      block4.style.backgroundColor = "yellow";
+      block4.style.color = "yellow";
+        return;
+    } 
+  
+}, false);
+    
+</script>
+
+<link>
+
+h1 {
+    text-align: center;
+}
+
+.grid {  
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  align-items: center;    
+}
+
+.block {
+  padding: 0px;
+  border: 5px solid black;
+  margin: 0px; 
+  height: 200px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:100px;
+}
+
+body {
+    margin: 50px;
+}
+
+#world {
+  background-color: yellow;
+  color:green;
+}
+
+#end {
+  color:red;
+}
+
+#deadzone1 {
+	background-color: white;
+}
+
+</link>
 
 <html>
 <div>
